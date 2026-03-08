@@ -16,8 +16,8 @@ function SignUp() {
     const create = async (data) => {
         setError('')
         try {
-            const userData = await authService.createAccount(data)
-            if (userData) {
+            const account = await authService.createAccount(data)
+            if (account) {
                 const userData = await authService.getCurrentUser()
                 if (userData) dispatch(login({ userData }));
                 navigate("/")
