@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Container, PostCard } from '../components'
+import { Container, PostCard, GoogleAd } from '../components'
 import appwriteService from '../Appwrite/config'
 
 function AllPosts() {
@@ -16,10 +16,17 @@ function AllPosts() {
         <div className='w-full py-8'>
             <Container>
                 <div className='flex flex-wrap'>
-                    {Posts.map((post) => (
-                        <div key={post.$id} className='p-2 w-1/4'>
-                            <PostCard {...post} />
-                        </div>
+                    {Posts.map((post, index) => (
+                        <React.Fragment key={post.$id}>
+                            <div className='p-2 w-1/4'>
+                                <PostCard {...post} />
+                            </div>
+                            {index === 1 && (
+                                <div className='p-2 w-full'>
+                                    <GoogleAd />
+                                </div>
+                            )}
+                        </React.Fragment>
                     ))}
                 </div>
             </Container>

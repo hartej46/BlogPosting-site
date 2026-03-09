@@ -5,6 +5,8 @@ const conf = {
     appwriteCollectionId: import.meta.env.VITE_APPWRITE_COLLECTION_ID,
     appwriteDatabaseID: import.meta.env.VITE_APPWRITE_DATABASE_ID,
     tinymceApiKey: String(import.meta.env.VITE_TINYMCE_API_KEY),
+    adSenseClientId: String(import.meta.env.VITE_ADSENSE_CLIENT_ID),
+    adSenseSlotId: String(import.meta.env.VITE_ADSENSE_SLOT_ID),
 }
 
 export default conf

@@ -12,6 +12,7 @@ import PostCard from "./PostCard";
 import AuthLayout from './AuthLayout';
 import Input from "./Input";
 import Select from './Select.jsx'
+import GoogleAd from "./GoogleAd";
 
 export {
     Header,
@@ -27,5 +28,6 @@ export {
     PostForm,
     AuthLayout,
     Input,
-    Select
+    Select,
+    GoogleAd
 } 

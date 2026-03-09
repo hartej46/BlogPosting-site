@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import appwriteService from '../Appwrite/config'
-import { Container, PostCard } from '../components'
+import { Container, PostCard, GoogleAd } from '../components'
 
 function Home() {
     const [posts, setPosts] = useState([])
@@ -32,10 +32,17 @@ function Home() {
         <div className='w-full py-8'>
             <Container>
                 <div className='flex flex-wrap'>
-                    {posts.map((post) => (
-                        <div key={post.$id} className='p-2 w-1/4'>
-                            <PostCard {...post} />
-                        </div>
+                    {posts.map((post, index) => (
+                        <React.Fragment key={post.$id}>
+                            <div className='p-2 w-1/4'>
+                                <PostCard {...post} />
+                            </div>
+                            {index === 1 && (
+                                <div className='p-2 w-full'>
+                                    <GoogleAd />
+                                </div>
+                            )}
+                        </React.Fragment>
                     ))}
                 </div>
             </Container>
