@@ -22,7 +22,7 @@ function AllPosts() {
                                 <PostCard {...post} />
                             </div>
                             {index === 1 && (
-                                <div className='p-2 w-full'>
+                                <div className='p-2 w-1/2'>
                                     <GoogleAd />
                                 </div>
                             )}
